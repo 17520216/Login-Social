@@ -4,9 +4,8 @@ import GoogleProvider from "next-auth/providers/google";
 export default NextAuth({
   providers: [
     GoogleProvider({
-      // clientId: process.env.GOOGLE_CLIENT_ID,
-      clientId: "516256127650-5qp43uoiurrvg9ng95f53n6o4dnur677.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
 
@@ -32,7 +31,6 @@ export default NextAuth({
     // strategy: 'jwt',
     maxAge: 3 * 24 * 60 * 60, // 3 days
     updateAge: 24 * 60 * 60, // 24 hours
-    secret: "dOR2zfgG53Uj+KvJKV/3PFuGms8DvKF/jSfh/d2xVMc=dOR2zfgG53Uj+KvJKV/3PFuGms8DvKF/jSfh/d2xVMc=",
-    // secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET,
   },
 });

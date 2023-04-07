@@ -12,7 +12,8 @@ const Providers = (props) => {
                         SessionProvider,
                         UserProvider,
                     ]}
-                    basePath={`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth`}
+                    // basePath={`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth`}
+                    basePath={`/api/auth`}
                     clientId={process.env.GOOGLE_CLIENT_ID}
                     {...props}
                 ></Compose>
